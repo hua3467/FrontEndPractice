@@ -117,9 +117,26 @@
 }
 .footer6 {
     height: 60px;
-    background: rgb(79, 79, 79);
+    background: rgb(79, 79, 79); 
     grid-row-start: footer;
     grid-row-end: footer;
     grid-column-start: footer;
     grid-column-end: footer;
+}
+
+/* Fitting Track Contents */
+#grid7 {
+    display: grid;
+    grid-template-columns: 1fr fit-content(300px) 2fr;
+}
+
+#example7 {
+    display: grid;
+    grid-template-columns: fit-content(50ch) fit-content(50ch) fit-content(50ch);
+}
+
+/* Repeating Grid Lines */
+#grid8 {
+    display: grid;
+    grid-template-columns: repeat(3, 2em 1fr 1fr);
 }
