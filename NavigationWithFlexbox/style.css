@@ -52,7 +52,7 @@ button {
     padding: 9px 25px;
     background-color: var(--bg-button);
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     cursor: pointer;
     transition: var(--transition-speed);
 }

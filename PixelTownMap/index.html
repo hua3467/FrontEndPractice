@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div id="details" class="hide">
+            <div class="close-btn"><i class="far fa-times-circle"></i></div>
+            <div class="avartar"><img src="avartar_bene.png" alt=""></div>
+            <div class="detail-info">
+                <h3 class="person-name">Ron Ramsay</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <a href="#">Visit Ron's Space <i class="fa fa-arrow-right fa-x3"></i></a>
+            </div>
+        </div>
+        <div class="info-bubble absolute-potition hide" id="infoBubble">
+            <h3 class="person-name">Ron Ramsay</h3>
+        </div>
+        <img src="shop.png" class="buildings" id="shopBuilding" alt="">
+        <img src="Tulip-City.png" usemap="#workmap" alt="" id="map-img">
+    </main>
+    
+
+    <script>
+        const shopBuilding = document.querySelector('#shopBuilding');
+        const shopArea = document.querySelector('#shopArea');
+        const infoBubble = document.querySelector('#infoBubble');
+        const mapBG = document.querySelector('#map-img');
+        const details = document.querySelector('#details');
+        const detailBtnClose = document.querySelector('#details .close-btn');
+
+        shopBuilding.addEventListener('mouseenter', (e) => {
+            infoBubble.classList.remove('hide');
+            infoBubble.style = `left: ${e.target.offsetLeft}px; top: ${e.target.offsetTop - 100}px;`;
+        });
+        shopBuilding.addEventListener('mouseleave', (e) => {
+            infoBubble.classList.add('hide');
+        });
+        shopBuilding.addEventListener('click', () => {
+            details.classList.remove('hide');
+        })
+        detailBtnClose.addEventListener('click', () => {
+            details.classList.add('hide');
+            console.log("click");
+        })
+
+        mapBG.addEventListener('click', () => {
+            infoBubble.classList.add('hide');
+        })
+    </script>
+</body>
+</html>
