@@ -1,0 +1,26 @@
+html, body, #flesh {
+  position: relative;
+  margin: 0;
+  height: auto;
+  width: 100%;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/40713/hand-xray-flesh.jpg") no-repeat;
+  background-size: 100% auto;
+}
+
+#bone {
+  width: 100%;
+  margin: 0;
+  -webkit-mask-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/40713/xray-machine.png");
+          mask-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/40713/xray-machine.png");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 150px;
+          mask-size: 150px;
+  cursor: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*# sourceMappingURL=style.css.map */
